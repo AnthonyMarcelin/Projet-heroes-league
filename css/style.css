@@ -22,6 +22,12 @@ header {
     position: relative;
 }
 
+nav {
+    visibility: hidden;
+    display: none;
+
+}
+
 #headerImg {
     width: 100%;
     border-radius: 10px;
@@ -204,4 +210,56 @@ footer li {
 
 footer p {
     margin 25px 0;
+}
+
+/* Responsive */
+
+@media screen and(min-width: 768px) {
+    body {
+        width: 80%;
+    }
+    
+    nav {
+        display: initial;
+        flex-direction: row;
+    }
+
+    nav li {
+        list-style-type: none;
+    }
+
+    #superServices {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "demenagement repas"
+          "bouchons soirée"
+          "hero hero";
+      }
+      
+      .hero { grid-area: hero; }
+      
+      .demenagement { grid-area: demenagement; }
+      
+      .repas { grid-area: repas; }
+      
+      .bouchons { grid-area: bouchons; }
+      
+      .soirée { grid-area: soirée; }
+      
+
+    .card {
+        display: inline-block;
+    }
+
+}
+
+@media screen and(min-width: 1024px) {
+    body {
+        width: 70%;
+    }
+    
 }
